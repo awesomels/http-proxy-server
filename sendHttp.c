@@ -52,10 +52,10 @@ int main(int argc,char **argv)
 	sprintf(str,"%d",len);
 
 	memset(str1,0,4096);
-	strcat(str1,"POST /webservices/qqOnlineWebService.asmx/qqCheckOnline HTTP/1.1\n");
-	strcat(str1,"Host: www.webxml.com.cn\n");
-	strcat(str1,"Content-Type: application/x-www-form-urlencoded\n");
-	strcat(str1,"Content-Length: ");
+	strcat(str1,"GET /index.html HTTP/1.1\n");
+	strcat(str1,"Host: www.baidu.com\n");
+//	strcat(str1,"Content-Type: application/x-www-form-urlencoded\n");
+//	strcat(str1,"Content-Length: ");
 	strcat(str1,"\n\n");
 
 	strcat(str1,str);
@@ -78,9 +78,9 @@ int main(int argc,char **argv)
 		tv.tv_sec = 0;
 		tv.tv_usec = 0;
 		h = 0;
-		printf("--------------------------------------->1");
+		printf("--------------------------------------->1\n");
 		h = select(sockfd +1,&t_set1,NULL,NULL,&tv);
-		printf("--------------------------------------->2");
+		printf("--------------------------------------->2\n");
 
 		//if(h == 0) continue;
 		if(h < 0) {
