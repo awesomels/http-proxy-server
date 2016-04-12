@@ -5,6 +5,8 @@
 #include <netdb.h>
 #include <fcntl.h>
 
+#include <string.h>
+
 int create_tcp_socket();
 char *get_ip(char *host);
 char *build_get_query(char *host,char *page);
@@ -75,7 +77,7 @@ int main(int argc,char **argv)
     while((tmpres = recv(sock,buf,BUFSIZ,0)) > 0){
         if(htmlstart == 0){
 	    htmlcontent = strstr(buf,"\r\n\r\n");
-	    if(htmlsontent != NULL){
+	    if(htmlcontent != NULL){
 		htmlstart = 1;
 		htmlcontent+=4;
 	    }
@@ -87,7 +89,7 @@ int main(int argc,char **argv)
 	}
 	memset(buf,0,tmpres);
     }
-    fprinf(stdout,"receive data over!\n");
+    fprintf(stdout,"receive data over!\n");
     if(tmpres < 0){
 	perror("Error receiving data!\n");
     }
@@ -100,7 +102,7 @@ int main(int argc,char **argv)
 }
 void usage()
 {
-    fprintf(stderr,"USAGE:htmlget host [page]\n\thost:the website hostname. ex:www.baidu.com\n\tpage:the page to retrieve. ex:index.html,default:/\n",);
+    fprintf(stderr,"USAGE:htmlget host [page]\n\thost:the website hostname. ex:www.baidu.com\n\tpage:the page to retrieve. ex:index.html,default:/\n");
 
 }
 
