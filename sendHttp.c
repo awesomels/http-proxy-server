@@ -12,7 +12,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-#define IPSTR "192.168.80.129"
+#define IPSTR "123.125.114.144"
 #define PORT 80
 #define BUFSIZE 1024
 
