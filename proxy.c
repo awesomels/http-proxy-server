@@ -20,6 +20,8 @@ int main(int argc,char *argv[])
 		perror("socket");
 		exit(-1);
 	}
+	/**/
+
 	//设置本地地址结构体
 	struct sockaddr_in my_addr;
 	bzero(&my_addr, sizeof(my_addr));//清空，保证最后8字节为0
@@ -67,7 +69,7 @@ int main(int argc,char *argv[])
 		printf("----------------------------------------------------\n");
 		printf("client ip = %s,port = %d\n",cli_ip,ntohs(client_addr.sin_port));
 
-		char recv_buf[512] = "";
+		char recv_buf[2048] = "";
 		while(recv(connRecfd, recv_buf, sizeof(recv_buf), 0) > 0)//接收数据
 		{
 			printf("\nrecv data:\n");
