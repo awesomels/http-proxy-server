@@ -5,13 +5,23 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <netdb.h>
+
+#define BUF_SIZE 4096
 
 typedef struct Hostname{
 	int length;
 	char *src;
 }Hostname,*phost;
 
+struct hostent *hptr;
 
+/*----------------getHost()---------------------------
+ *
+ *获取http请求的主机信息，存储在Hostname结构体中
+ *Hostname结构体存储主机名的起始地址和主机名长度
+ *
+ **/
 Hostname getHost(const char* m_string)
 {
 	char *substr = "Host: ";
@@ -19,13 +29,20 @@ Hostname getHost(const char* m_string)
 	m_stu.src = strstr(m_string, substr) + 6;
 	char *p_char = m_stu.src;
 	m_stu.length = 0;
-	while(*p_char != '\n'){
+	while(*p_char != '\r'){
 		m_stu.length++;
 		p_char++;
 	}
 	return m_stu;
-}
+}//--------------------getHost()----------------------
 
+
+
+/*--------------------main()----------------------------
+ *
+ *主函数
+ *
+ */
 int main(int argc,char *argv[])
 {
 	//hostname结构体
@@ -109,22 +126,43 @@ int main(int argc,char *argv[])
 		printf("----------------------------------------------------\n");
 		printf("client ip = %s,port = %d\n",cli_ip,ntohs(client_addr.sin_port));
 
-		char recv_buf[4096] = "";//缓冲buffer
+		
+		char recv_buf[BUF_SIZE] = "";//缓冲buffer
+		char ipstr[32];//目的IP地址
 		while(recv(connRecfd, recv_buf, sizeof(recv_buf), 0) > 0)//接收数据
 		{
 			hostname = getHost(recv_buf);
-			char *domainName = (char*)malloc(hostname.length);
+			char *domainName = (char*)malloc(hostname.length);//malloc domainName
 			strncpy(domainName, hostname.src, hostname.length);
-			printf("%s\n", domainName);
+			printf(" %s\n", domainName);
+			if((hptr = gethostbyname(domainName)) == NULL){
+				printf(" gethostbyname error for host:%s\n", domainName);
+				printf(" size of domainName:%ld\n", strlen(domainName));
+				herror("gethostbyname");
+				char mm[] = "www.baidu.com";
+				printf(" size of mm:%ld\n", strlen(mm));
+				return 0;
+			}			
+			switch(hptr->h_addrtype){
+				case AF_INET:
+				case AF_INET6:
+					printf(" first address: %s\n", inet_ntop(hptr->h_addrtype, \
+											hptr->h_addr, ipstr, sizeof(ipstr)));
+				break;
+				default:
+					printf(" unknown address type\n");
+				break;
+			}//switch
+			free(domainName);//free domainName
 			printf("\nrecv data:\n");
 			printf("%s\n", recv_buf);
-		}
+		}//while(recv)
 
 		close(connRecfd);//关闭已连接套接字
 		printf("client closed!\n");
-	}
+	}//while(1),主循环
 
 	close(sockRecfd);//关闭监听套接字
 
 	return 0;
-}
+}//---------------------------main()--------------------------
