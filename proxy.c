@@ -6,8 +6,32 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+typedef struct Hostname{
+	int length;
+	char *src;
+}Hostname,*phost;
+
+
+Hostname getHost(const char* m_string)
+{
+	char *substr = "Host: ";
+	Hostname m_stu;
+	m_stu.src = strstr(m_string, substr) + 6;
+	char *p_char = m_stu.src;
+	m_stu.length = 0;
+	while(*p_char != '\n'){
+		m_stu.length++;
+		p_char++;
+	}
+	return m_stu;
+}
+
 int main(int argc,char *argv[])
 {
+	//hostname结构体
+	Hostname hostname;
+	bzero(&hostname, sizeof(hostname));
+	
 	unsigned short port = 8000;//本地端口
 	if(argc > 1)
 	{
@@ -17,17 +41,33 @@ int main(int argc,char *argv[])
 	int sockRecfd = socket(AF_INET, SOCK_STREAM, 0);
 	if(sockRecfd < 0)
 	{
-		perror("socket");
+		perror("recvsocket");
 		exit(-1);
 	}
-	/**/
+	/*添加发送socket*/
+	int sockSenfd = socket(AF_INET, SOCK_STREAM, 0);
+	if(sockSenfd < 0)
+	{
+		perror("sendsocket");
+		exit(-1);
+	}
 
-	//设置本地地址结构体
+	//设置本地地址结构体 my_addr
 	struct sockaddr_in my_addr;
 	bzero(&my_addr, sizeof(my_addr));//清空，保证最后8字节为0
 	my_addr.sin_family = AF_INET;//ipv4
 	my_addr.sin_port = htons(port);//端口.htons将主机的无符号短整型数转换成网络字节序
 	my_addr.sin_addr.s_addr = htonl(INADDR_ANY);//ip,INADDR_ANY为通配地址其值为0.将主机的无符号长整型数转换为网络字节序
+	/*
+	 *添加目的地址结构体 da_addr
+	 *目的IP地址暂时未知
+	 *da_addr.sin_addr.s_addr
+	 */
+	struct sockaddr_in da_addr;
+	bzero(&da_addr, sizeof(da_addr));
+	da_addr.sin_family = AF_INET;
+	da_addr.sin_port = htons(80);
+
 
 	//2.绑定：将本地ip、端口与套接字socket相关联起来
 	int err_log = bind(sockRecfd, (struct sockaddr*)&my_addr, sizeof(my_addr));
@@ -69,11 +109,15 @@ int main(int argc,char *argv[])
 		printf("----------------------------------------------------\n");
 		printf("client ip = %s,port = %d\n",cli_ip,ntohs(client_addr.sin_port));
 
-		char recv_buf[2048] = "";
+		char recv_buf[4096] = "";//缓冲buffer
 		while(recv(connRecfd, recv_buf, sizeof(recv_buf), 0) > 0)//接收数据
 		{
+			hostname = getHost(recv_buf);
+			char *domainName = (char*)malloc(hostname.length);
+			strncpy(domainName, hostname.src, hostname.length);
+			printf("%s\n", domainName);
 			printf("\nrecv data:\n");
-			printf("%s\n",recv_buf);
+			printf("%s\n", recv_buf);
 		}
 
 		close(connRecfd);//关闭已连接套接字
