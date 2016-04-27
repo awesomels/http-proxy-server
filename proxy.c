@@ -12,9 +12,9 @@
 typedef struct Hostname{
 	int length;
 	char *src;
-}Hostname,*phost;
+}Hostname;
 
-struct hostent *hptr;
+struct hostent *hptr;//主机信息结构对象
 
 /*----------------getHost()---------------------------
  *
@@ -113,6 +113,7 @@ int main(int argc,char *argv[])
 		socklen_t cliaddr_len = sizeof(client_addr);
 
 		int connRecfd = 0;
+		int connSenfd = 0;
 
 		//4.从完成连接队列中提取客户端连接
 		connRecfd = accept(sockRecfd, (struct sockaddr*)&client_addr, &cliaddr_len);
@@ -129,40 +130,48 @@ int main(int argc,char *argv[])
 		
 		char recv_buf[BUF_SIZE] = "";//缓冲buffer
 		char ipstr[32];//目的IP地址
+		int flag = 1;
 		while(recv(connRecfd, recv_buf, sizeof(recv_buf), 0) > 0)//接收数据
 		{
-			hostname = getHost(recv_buf);
-			char *domainName = (char*)malloc(hostname.length);//malloc domainName
-			strncpy(domainName, hostname.src, hostname.length);
-			printf(" %s\n", domainName);
-			if((hptr = gethostbyname(domainName)) == NULL){
-				printf(" gethostbyname error for host:%s\n", domainName);
-				printf(" size of domainName:%ld\n", strlen(domainName));
-				herror("gethostbyname");
-				char mm[] = "www.baidu.com";
-				printf(" size of mm:%ld\n", strlen(mm));
-				return 0;
-			}			
-			switch(hptr->h_addrtype){
-				case AF_INET:
-				case AF_INET6:
-					printf(" first address: %s\n", inet_ntop(hptr->h_addrtype, \
-											hptr->h_addr, ipstr, sizeof(ipstr)));
-				break;
-				default:
-					printf(" unknown address type\n");
-				break;
-			}//switch
-			free(domainName);//free domainName
-			printf("\nrecv data:\n");
+			if(flag){
+				hostname = getHost(recv_buf);
+				char *domainName = (char*)malloc(hostname.length);//malloc domainName
+				strncpy(domainName, hostname.src, hostname.length);
+				printf(" %s\n", domainName);
+				if((hptr = gethostbyname(domainName)) == NULL){
+						printf(" gethostbyname error for host:%s\n", domainName);
+						printf(" size of domainName:%ld\n", strlen(domainName));
+						herror("gethostbyname");
+						return 0;
+				}			
+				switch(hptr->h_addrtype){
+						case AF_INET:
+						case AF_INET6:
+								printf(" first address: %s\n", inet_ntop(hptr->h_addrtype, \
+														hptr->h_addr, ipstr, sizeof(ipstr)));
+								break;
+						default:
+								printf(" unknown address type\n");
+								break;
+				}//switch
+				free(domainName);//free domainName
+				flag = 0;
+				da_addr.sin_addr.s_addr = htonl(inet_addr(ipstr));//绑定目的ip
+				/*连接服务器 connect*/
+				connSenfd = connect(sockSenfd, (struct sockaddr*)&da_addr, sizeof(struct sockaddr));
+			}//if(flag)
+			send(connSenfd, recv_buf, sizeof(recv_buf), 0);//向网络转发请求
 			printf("%s\n", recv_buf);
 		}//while(recv)
 
-		close(connRecfd);//关闭已连接套接字
+		close(connRecfd);//关闭与浏览器套接字
+		close(connSenfd);//关闭与互联网套接字
 		printf("client closed!\n");
 	}//while(1),主循环
 
 	close(sockRecfd);//关闭监听套接字
+	close(sockSenfd);//关闭发送套接字
+
 
 	return 0;
 }//---------------------------main()--------------------------
