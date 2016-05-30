@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #include <errno.h>
 
+#define Port 8000
 
 int main(){
 
@@ -113,17 +114,26 @@ static void* UtoR(void* arg){
 			toRemt_addr.sin_addr.s_addr = htonl(inet_addr(ipstr));
 			flag = 0;
 			/* 连接服务器 connect */
-			conn
+			if(connect(pstru->mRsocket, (struct sockaddr*)&toRemt_addr, sizeof(toRemt_addr)) < 0){
+                perror("connect error");
+                exit(-1);
+			}
+			/* 发送给远程主机 */
+			write(pstru->mRsocket, buf, sizeof(buf));
 		}
 	}//while(recv)
 	
-	
+	/*
+	 *循环接收远程主机返回的http响应
+	 *并返回给usersockfd
+	 */
+    while( read(pstru->mRsocket, buf, sizeof(buf)) > 0 ){
+        /* 响应传会usersockfd */
+        write(pstru->mUsocket, buf,sizeof(buf));
+    }
 }
 
-/* remtsockfd向usersockfd传送数据，http响应 */
-static void* RtoU(void *arg){
 
-}
 
 /* 设置socket为非阻塞 */
 void setNonBlocking(int mSocket){

@@ -5,19 +5,12 @@
 #define BUF_SIZE 4096
 
 /* UtoR线程参数 */
-typedef struct mUtoR{
+typedef struct mTrans{
 	int mUsocket;
 	int mRsocket;
-}mUtoR_t;
+}mTrans_t;
 
-/* RtoU线程参数 */
-typedef struct mRtoU{
-	int mSocket;
-}mRtoU_t;
-/* UtoR线程参数 */
-typedef struct mUtoR{
-	int mSocket;
-}mUtoR_t;
+
 
 /*
  *@brief:  域名转IP, 提供给发送socket
@@ -34,16 +27,11 @@ char *DNtoIP(mString);
 void setNonBlocking(int mSocket);
 
 /*
- *@brief:  从usersockfd向remtsockfd传送http请求
+ *@brief:  从usersockfd向remtsockfd传送http请求,接收处理并最后返回给usersockfd
  *@param:  
  *@return: void
  */
-static void* UtoR (void* arg);
+static void* TransWorker(void* arg);
 
-/*
- *@brief:  从remtsockfd向usersockfd传送http响应
- *@param:
- *@return: void
- */
-static void* RtoU (void* arg);
+
 #endif
