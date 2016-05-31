@@ -9,6 +9,7 @@
 #include <netdb.h>
 #include <fcntl.h>
 #include <errno.h>
+#include "proxy_main.h"
 
 #define Port 8000
 
@@ -30,11 +31,11 @@ int main(){
 	}
 	/* 设置本地地址结构体 */
 	struct sockaddr_in user_addr;
-	bzero(&user_addr, sizeof(useraddr));
+	bzero(&user_addr, sizeof(user_addr));
 	user_addr.sin_family = AF_INET;
 	user_addr.sin_port = htons(Port);
-	user_addr.sin_addr.s_addr = htol(INADDR_ANY);
-	
+	user_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+
 	/* 套接字绑定端口 */
 	ret = bind(usersockfd, (struct sockaddr*)&user_addr, sizeof(user_addr));
 	if(ret != 0){
@@ -73,23 +74,29 @@ int main(){
 		perror("epoll_ctl");
 		abort();
 	}
+	/* 添加客户端地址结构 */
+	struct sockaddr_in cli_addr;
+	int cli_len = sizeof(struct sockaddr);
 	/* Buffer where events are returned */
-	events = calloc(MAXENENTS, sizeof(event));
+	//events = calloc(MAXEVENTS, sizeof(event));  //暂时注销掉，并不知道干嘛
 	/* the event loop */
 	int nfds, i, connfd, n;
 	for ( ; ; ) {
 		nfds = epoll_wait(epfd, events, 20, 500);
 		for(i = 0; i < nfds; ++i) {
 			if(events[i].data.fd == usersockfd){   //有新的连接
-				connfd = accept(usersockfd, (sockaddr*)&cli_addr, &cli_len); //accept这个连接
+				connfd = accept(usersockfd, (struct sockaddr*)&cli_addr, &cli_len); //accept这个连接
 				setNonBlocking(connfd);   //设置为非阻塞
 				ev.data.fd = connfd;
-				ev.events = EPOLL|EPOLLET;
+				ev.events = EPOLLIN|EPOLLET;
 				epoll_ctl(epfd, EPOLL_CTL_ADD, connfd, &ev);   //将新的fd添加到epoll的监听队列
 			} else if (events[i].events & EPOLLIN) {   //已经连接的用户，接收到数据，读socket
-				
-			} else if (events[i].events & EPOLLOUT) {  //有数据发送
-				
+                mTrans_t *mparam;
+                mparam = calloc(1, sizeof(mTrans_t));
+                mparam->mUsocket = ev.data.fd;
+                mparam->mRsocket = remtsockfd;
+                tpool_add_work(TransWorker, (void*)mparam);
+                free(mparam);
 			}
 		}//nfds for
 	}//for
@@ -98,9 +105,9 @@ int main(){
 }
 
 /* usersockfd向remtsockfd传送数据，http请求 */
-static void* UtoR(void* arg){
-	struct mUtoR *pstru;
-	pstru = (struct mUtoR *)arg;
+static void* TransWorker(void* arg){
+    mTrans_t *pstru;
+	pstru = (mTrans_t *)arg;
 	char buf[BUF_SIZE];
 	char ipstr[32];
 	int flag = 1;
@@ -122,7 +129,7 @@ static void* UtoR(void* arg){
 			write(pstru->mRsocket, buf, sizeof(buf));
 		}
 	}//while(recv)
-	
+
 	/*
 	 *循环接收远程主机返回的http响应
 	 *并返回给usersockfd
@@ -136,7 +143,7 @@ static void* UtoR(void* arg){
 
 
 /* 设置socket为非阻塞 */
-void setNonBlocking(int mSocket){
+int setNonBlocking(int mSocket){
 	int flags, s;
 	//获取文件标志位
 	flags = fcntl(mSocket, F_GETFL, 0);
@@ -146,7 +153,7 @@ void setNonBlocking(int mSocket){
 	}
 	//设置文件状态标志
 	flags |= O_NONBLOCK;
-	s = fcntl(sfd, F_SETFL, flags);
+	s = fcntl(mSocket, F_SETFL, flags);
 	if(s == -1){
 		perror("fcntl");
 		return -1;
