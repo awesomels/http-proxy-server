@@ -1,9 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <mysql.h>
 #include <string.h>
 #include "filter.h"
 
 int filter_word(char *oriStr){
+
+    /* 存储数据库取出的屏蔽关键词 */
+    char *testURL[100];
+    char *testWord[100];
+
     MYSQL mysql;//mysql连接
     MYSQL_RES *res;//这个结构代表返回行的一个查询结果
     MYSQL_ROW row;//一个数据的类型安全（type-safe）的表示
