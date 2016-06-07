@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include "proxy_main.h"
+#include "filter.h"
 
 #define Port 8000
 
@@ -60,7 +61,7 @@ int main(){
 	 *使用epoll
 	 */
 	/* 声明epoll_wait结构体的变量，ev用于注册事件，数组指针用于回传要处理的事件 */
-	struct epoll_event ev, *events;
+	struct epoll_event ev, *events[20];
 	int epfd = epoll_create1(0);//除了参数size被忽略外，此函数和epoll_create完全相同
 	if(epfd == -1){
 		perror("epoll_create");
@@ -106,6 +107,7 @@ int main(){
 
 /* usersockfd向remtsockfd传送数据，http请求 */
 static void* TransWorker(void* arg){
+    printf("enter TransWorker \n");
     mTrans_t *pstru;
 	pstru = (mTrans_t *)arg;
 	char buf[BUF_SIZE];
