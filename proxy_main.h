@@ -8,8 +8,13 @@
 typedef struct mTrans{
 	int mUsocket;
 	int mRsocket;
+<<<<<<< Updated upstream
 }mTrans_t;
 
+=======
+	struct sockaddr_in mAddr;
+}mUtoR_t;
+>>>>>>> Stashed changes
 
 
 /*
@@ -17,13 +22,18 @@ typedef struct mTrans{
  *@param:  mString, 供提取域名的字符串,未筛选
  *@return: ipstr[32], 返回的ip地址,32位字符数组
  */
+<<<<<<< Updated upstream
 char *DNtoIP(char *mString, char *ipstr);
+=======
+char *DNtoIP(char* mString, char* ipstr);
+>>>>>>> Stashed changes
 
 /*
  *@brief:  设置socket为非阻塞模式
  *@param:  mSocket套接字
  *@return: 0:正常
  */
+<<<<<<< Updated upstream
 int setNonBlocking(int mSocket);
 
 /*
@@ -34,4 +44,15 @@ int setNonBlocking(int mSocket);
 static void* TransWorker(void* arg);
 
 
+=======
+void setNonBlocking(int mSocket);
+
+/*
+ *@brief:  从usersockfd向remtsockfd传送http请求
+ *@param:  
+ *@return: void
+ */
+static void* TransWorker (void* arg);
+
+>>>>>>> Stashed changes
 #endif

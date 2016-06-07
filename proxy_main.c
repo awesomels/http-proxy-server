@@ -79,7 +79,10 @@ int main(){
 	struct sockaddr_in cli_addr;
 	int cli_len = sizeof(struct sockaddr);
 	/* Buffer where events are returned */
-	//events = calloc(MAXEVENTS, sizeof(event));  //暂时注销掉，并不知道干嘛
+	events = calloc(MAXEVENTS, sizeof(event));
+	//!--cli_addr建立一个对应的数组
+	struct sockaddr_in cli_addr[MAXEVENTS];
+	socklen_t cli_len = sizeof(cli_addr[0]);
 	/* the event loop */
 	int nfds, i, connfd, n;
 	for ( ; ; ) {
@@ -102,6 +105,9 @@ int main(){
 		}//nfds for
 	}//for
 
+	/* 关闭套接字 */
+	close(usersockfd);
+	close(remtsockfd);
 	return 0;
 }
 
@@ -141,7 +147,6 @@ static void* TransWorker(void* arg){
         write(pstru->mUsocket, buf,sizeof(buf));
     }
 }
-
 
 
 /* 设置socket为非阻塞 */
