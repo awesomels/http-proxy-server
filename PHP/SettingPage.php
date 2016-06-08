@@ -7,11 +7,38 @@
 div#container{width:800px; margin-left: auto;
 margin-right: auto;}
 div#header {background-color:#99bbbb;}
-div#menu {background-color:#09F; height:50px}
-div#URL {background-color:#ffff99;height:500px;width:400px;float:left; border:1px}
-div#Fwords {background-color:#EEEEEE;height:500px;width:400px;float:left;border:1px}
+div#menu {background-color:#999; height:50px}
+div#URL {height:500px;width:350px;float:left; border:1px; margin:0 25px}
+div#Fwords {height:500px;width:350px;float:left;border:1px margin:0 25px}
 h1 {margin-bottom:0;}
 h2 {margin-bottom:0;font-size:18px;}
+
+
+#customers
+  {
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  width:100%;
+  border-collapse:collapse;
+  }
+
+
+
+#customers th 
+  {
+  font-size:1.1em;
+  text-align:left;
+  padding-top:5px;
+  padding-bottom:4px;
+  background-color:#A7C942;
+  color:#ffffff;
+  }
+
+#customers tr.alt td 
+  {
+  color:#000000;
+  background-color:#EAF2D3;
+  }
+
 </style>
 <title>HTTP Proxy Server</title>
 </head>
@@ -20,7 +47,7 @@ h2 {margin-bottom:0;font-size:18px;}
 <div id="container">
 
 <div id="header">
-<h1>HTTP Proxy Server Control Center</h1>
+<h1 align="center">内容安全的HTTP代理服务器控制中心</h1>
 </div>
 
 <div id="menu">
@@ -41,11 +68,14 @@ mysql_query("SET NAMES GB2312");
 $rs = mysql_query($q, $link); 
 if(!$rs){die("Valid result!");} 
 
-echo "<table border=\"1\">"; 
-echo "<tr><td>序号</td><td>屏蔽词</td><td>操作</td></tr>"; 
+echo "<table id=\"customers\">"; 
+echo "<tr><th>序号</th><th>屏蔽词</th><th>操作</th></tr>"; 
 $i = 1;
 while($row = mysql_fetch_row($rs)){
-	echo "<tr><td>$i</td><td>$row[1]</td><td><a href='dothings.php?del_uword=$row[1]'>删除</a></td></tr>"; 
+	if($i%2)
+		echo "<tr class=\"alt\"><td>$i</td><td>$row[1]</td><td><a href='dothings.php?del_uword=$row[1]'>删除</a></td></tr>"; 
+	else
+		echo "<tr><td>$i</td><td>$row[1]</td><td><a href='dothings.php?del_uword=$row[1]'>删除</a></td></tr>";
 	$i++;
 }
 echo "</table>"; 
@@ -70,11 +100,14 @@ $q = "SELECT * FROM fword";
 mysql_query("SET NAMES GB2312");          
 $rs = mysql_query($q, $link); 
 if(!$rs){die("Valid result!");} 
-echo "<table border=\"1\">"; 
-echo "<tr><td>序号</td><td>屏蔽词</td><td>操作</td></tr>"; 
+echo "<table id=\"customers\">"; 
+echo "<tr><th>序号</th><th>屏蔽词</th><th>操作</th></tr>"; 
 $j = 1;
 while($row = mysql_fetch_row($rs)){
- echo "<tr><td>$j</td><td>$row[1]</td><td><a href='dothings.php?del_fword=$row[1]'>删除</a></td></tr>"; 
+	if($j%2)
+ 		echo "<tr class=\"alt\"><td>$j</td><td>$row[1]</td><td><a href='dothings.php?del_fword=$row[1]'>删除</a></td></tr>"; 
+	else
+		echo "<tr><td>$j</td><td>$row[1]</td><td><a href='dothings.php?del_fword=$row[1]'>删除</a></td></tr>";
  $j++;
 }
 echo "</table>"; 
