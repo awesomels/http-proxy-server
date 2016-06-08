@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
@@ -30,23 +31,30 @@ h2 {margin-bottom:0;font-size:18px;}
 <div id="URL">
 <h2>URL:</h2>
 <?php
+
 $link=mysql_connect("localhost","root","");  
 if(!$link) echo "没有连接成功!";  
-else echo "连接成功!";  
+
 mysql_select_db("filter", $link);  
 $q = "SELECT * FROM url";                  
 mysql_query("SET NAMES GB2312");          
 $rs = mysql_query($q, $link); 
 if(!$rs){die("Valid result!");} 
+
 echo "<table border=\"1\">"; 
-echo "<tr><td>序号</td><td>屏蔽词</td></tr>"; 
+echo "<tr><td>序号</td><td>屏蔽词</td><td>操作</td></tr>"; 
 $i = 1;
-while($row = mysql_fetch_row($rs)) echo "<tr><td>$i</td><td>$row[1]</td></tr>"; 
+while($row = mysql_fetch_row($rs)){
+	echo "<tr><td>$i</td><td>$row[1]</td><td><a href='dothings.php?del_uword=$row[1]'>删除</a></td></tr>"; 
+	$i++;
+}
 echo "</table>"; 
+
 mysql_close($link); 
 ?>
-<form name="input" action="html_form_action.asp" method="get">
-<input type="text" name="word" />
+
+<form name="input" action="dothings.php" method="post" >
+<input type="text" name="uword" />
 <input type="submit" value="添加规则" />
 </form>
 </div>
@@ -56,28 +64,27 @@ mysql_close($link);
 <?php
 $link=mysql_connect("localhost","root","");  
 if(!$link) echo "没有连接成功!";  
-else echo "连接成功!";  
+ 
 mysql_select_db("filter", $link);  
 $q = "SELECT * FROM fword";                  
 mysql_query("SET NAMES GB2312");          
 $rs = mysql_query($q, $link); 
 if(!$rs){die("Valid result!");} 
 echo "<table border=\"1\">"; 
-echo "<tr><td>序号</td><td>屏蔽词</td></tr>"; 
+echo "<tr><td>序号</td><td>屏蔽词</td><td>操作</td></tr>"; 
 $j = 1;
 while($row = mysql_fetch_row($rs)){
- echo "<tr><td>$j</td><td>$row[1]</td></tr>"; 
+ echo "<tr><td>$j</td><td>$row[1]</td><td><a href='dothings.php?del_fword=$row[1]'>删除</a></td></tr>"; 
  $j++;
 }
 echo "</table>"; 
 mysql_close($link); 
 ?>
 <form name="input" action="dothings.php" method="post" >
-<input type="text" name="word" />
+<input type="text" name="fword" />
 <input type="submit" value="添加规则" />
 </div>
 
 </div>
-
 </body>
 </html>
