@@ -64,7 +64,7 @@ if(!$link) echo "没有连接成功!";
 
 mysql_select_db("filter", $link);  
 $q = "SELECT * FROM url";                  
-mysql_query("SET NAMES GB2312");          
+mysql_query("SET CHARACTER SET 'utf8'");          
 $rs = mysql_query($q, $link); 
 if(!$rs){die("Valid result!");} 
 
@@ -97,7 +97,7 @@ if(!$link) echo "没有连接成功!";
  
 mysql_select_db("filter", $link);  
 $q = "SELECT * FROM fword";                  
-mysql_query("SET NAMES GB2312");          
+mysql_query("SET CHARACTER SET 'utf8'");          
 $rs = mysql_query($q, $link); 
 if(!$rs){die("Valid result!");} 
 echo "<table id=\"customers\">"; 
