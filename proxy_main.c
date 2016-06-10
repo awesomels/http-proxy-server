@@ -34,8 +34,17 @@ int main(){
 	struct sockaddr_in user_addr;
 	bzero(&user_addr, sizeof(user_addr));
 	user_addr.sin_family = AF_INET;
-	user_addr.sin_port = htons(Port);
-	user_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+	user_addr.sin_port = htons(8000);
+	user_addr.sin_addr.s_addr = INADDR_ANY;
+
+	/* 设置套接字为非阻塞 */
+	setNonBlocking(usersockfd);
+    int on=1;
+    if((setsockopt(usersockfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on)))<0)
+    {
+        perror("setsockopt failed");
+        exit(EXIT_FAILURE);
+    }
 
 	/* 套接字绑定端口 */
 	ret = bind(usersockfd, (struct sockaddr*)&user_addr, sizeof(user_addr));
@@ -47,6 +56,7 @@ int main(){
 	}
 	/* 套接字进入被动监听 */
 	ret = listen(usersockfd, SOMAXCONN);//SOMAXCONN由系统决定监听队列长度，一般几百
+
 	if(ret != 0){
 		perror("listen error");
 		close(usersockfd);
@@ -54,8 +64,9 @@ int main(){
 		exit(1);
 	}
 
-	/* 设置套接字为非阻塞 */
-	setNonBlocking(usersockfd);
+
+
+
 
 	/*
 	 *使用epoll
@@ -77,13 +88,17 @@ int main(){
 	}
 	/* 添加客户端地址结构 */
 	struct sockaddr_in cli_addr;
-    socklen_t cli_len;
+    socklen_t cli_len = sizeof(cli_addr);
     printf("epoll\n");
+
+
+
 	/* the event loop */
 	int nfds, i, connfd, n,sockfd;
-	char line[256];
+	char line[1024];
 	for ( ; ; ) {
-        printf("outside for\n");
+
+        //printf("outside for\n");
 		nfds = epoll_wait(epfd, events, 20, 500);
 		for(i = 0; i < nfds; ++i) {
             printf("inside for\n");
@@ -100,10 +115,16 @@ int main(){
             /* 监听到读事件 */
 			} else if (events[i].events & EPOLLIN) {   //已经连接的用户，接收到数据，读socket
                 sockfd = events[i].data.fd;
+                printf("sock=%d\n",sockfd);
                 printf("epoll in\n");
-                read(sockfd,line,256);
-                printf("%s\n",line);
-
+                while((n=read(sockfd,line,1024)) > 0){
+                    printf("dowhile--n=%d\n",n);
+                    printf("%s\n",line);
+                    bzero(line,1024);
+                    if(n<1024)
+                        break;
+                }
+                printf("out of while");
                 /* 设置用于注册的写操作事件，修改sockfd上要处理的事件为epollout */
                 ev.data.fd=sockfd;
                 ev.events=EPOLLOUT|EPOLLET;
@@ -117,8 +138,19 @@ int main(){
 			}
 			/* 监听到写事件,有事件发送，socket缓冲区有空间 */
 			else if(events[i].events & EPOLLOUT){
+                printf("epoll out\n");
                 sockfd = events[i].data.fd;
-                write(sockfd,line,256);
+                printf("sock=%d\n",sockfd);
+                //char liner="200 ok";
+                //printf("line is :%s\n",liner);
+                //while(  n=(write(sockfd,liner,1024)) > 0){
+                  //printf("write");
+                  //bzero(liner,1024);
+                  //if(n < 1024)
+                    //break;
+                //}
+
+                n = write(sockfd, "HTTP/1.0 400 Bad Request\n\n", 26);
 
                 ev.data.fd=sockfd;
                 ev.events=EPOLLIN|EPOLLET;
