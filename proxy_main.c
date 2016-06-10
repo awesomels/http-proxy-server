@@ -15,7 +15,7 @@
 #define Port 8000
 
 int main(){
-
+    printf("working\n");
 	/*
 	 *初始化socket,并绑定
 	 */
@@ -61,7 +61,7 @@ int main(){
 	 *使用epoll
 	 */
 	/* 声明epoll_wait结构体的变量，ev用于注册事件，数组指针用于回传要处理的事件 */
-	struct epoll_event ev, *events[20];
+	struct epoll_event ev, events[20];
 	int epfd = epoll_create1(0);//除了参数size被忽略外，此函数和epoll_create完全相同
 	if(epfd == -1){
 		perror("epoll_create");
@@ -77,30 +77,52 @@ int main(){
 	}
 	/* 添加客户端地址结构 */
 	struct sockaddr_in cli_addr;
-	int cli_len = sizeof(struct sockaddr);
-	/* Buffer where events are returned */
-	events = calloc(MAXEVENTS, sizeof(event));
-	//!--cli_addr建立一个对应的数组
-	struct sockaddr_in cli_addr[MAXEVENTS];
-	socklen_t cli_len = sizeof(cli_addr[0]);
+    socklen_t cli_len;
+    printf("epoll\n");
 	/* the event loop */
-	int nfds, i, connfd, n;
+	int nfds, i, connfd, n,sockfd;
+	char line[256];
 	for ( ; ; ) {
+        printf("outside for\n");
 		nfds = epoll_wait(epfd, events, 20, 500);
 		for(i = 0; i < nfds; ++i) {
+            printf("inside for\n");
+            /* 建立新的连接 */
 			if(events[i].data.fd == usersockfd){   //有新的连接
 				connfd = accept(usersockfd, (struct sockaddr*)&cli_addr, &cli_len); //accept这个连接
-				setNonBlocking(connfd);   //设置为非阻塞
+				//setNonBlocking(connfd);   //设置为非阻塞
+				char *str1 = inet_ntoa(cli_addr.sin_addr);
+				printf("accept a connection from %s\n",str1);
+				/* 设置用于读操作的文件描述符， 设置用于注册read操作事件*/
 				ev.data.fd = connfd;
 				ev.events = EPOLLIN|EPOLLET;
 				epoll_ctl(epfd, EPOLL_CTL_ADD, connfd, &ev);   //将新的fd添加到epoll的监听队列
+            /* 监听到读事件 */
 			} else if (events[i].events & EPOLLIN) {   //已经连接的用户，接收到数据，读socket
-                mTrans_t *mparam;
-                mparam = calloc(1, sizeof(mTrans_t));
-                mparam->mUsocket = ev.data.fd;
-                mparam->mRsocket = remtsockfd;
-                tpool_add_work(TransWorker, (void*)mparam);
-                free(mparam);
+                sockfd = events[i].data.fd;
+                printf("epoll in\n");
+                read(sockfd,line,256);
+                printf("%s\n",line);
+
+                /* 设置用于注册的写操作事件，修改sockfd上要处理的事件为epollout */
+                ev.data.fd=sockfd;
+                ev.events=EPOLLOUT|EPOLLET;
+                epoll_ctl(epfd,EPOLL_CTL_MOD,sockfd,&ev);
+                //mTrans_t *mparam;
+                //mparam = calloc(1, sizeof(mTrans_t));
+                //mparam->mUsocket = sockfd;
+                //mparam->mRsocket = remtsockfd;
+                //tpool_add_work(TransWorker, (void*)mparam);
+                //free(mparam);
+			}
+			/* 监听到写事件,有事件发送，socket缓冲区有空间 */
+			else if(events[i].events & EPOLLOUT){
+                sockfd = events[i].data.fd;
+                write(sockfd,line,256);
+
+                ev.data.fd=sockfd;
+                ev.events=EPOLLIN|EPOLLET;
+                epoll_ctl(epfd,EPOLL_CTL_MOD,sockfd,&ev);
 			}
 		}//nfds for
 	}//for
