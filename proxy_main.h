@@ -1,8 +1,7 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
-#define MAXEVENTS 64
-#define BUF_SIZE 4096
+
 
 /* UtoR线程参数 */
 typedef struct mTrans{

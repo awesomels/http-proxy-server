@@ -13,54 +13,49 @@
 #include "filter.h"
 
 #define Port 8000
+#define MAXBUF 1024
+#define BIGBUF 8000
 
 int main(){
     printf("working\n");
-	/*
-	 *初始化socket,并绑定
-	 */
+
 	int ret;
 	/* 创建socket */
-	int usersockfd = socket(AF_INET, SOCK_STREAM, 0);
-	int remtsockfd = socket(AF_INET, SOCK_STREAM, 0);
-	if(usersockfd < 0){
-		perror("usersockfd error");
-		exit(1);
-	}else if(remtsockfd < 0){
-		perror("remtsockfd error");
+	int listenfd = socket(AF_INET, SOCK_STREAM, 0);
+	if(listenfd < 0){
+		perror("listenfd error");
 		exit(1);
 	}
 	/* 设置本地地址结构体 */
 	struct sockaddr_in user_addr;
 	bzero(&user_addr, sizeof(user_addr));
 	user_addr.sin_family = AF_INET;
-	user_addr.sin_port = htons(8000);
+	user_addr.sin_port = htons(Port);
 	user_addr.sin_addr.s_addr = INADDR_ANY;
 
 	/* 设置套接字为非阻塞 */
-	setNonBlocking(usersockfd);
+	setNonBlocking(listenfd);
+	/* 设置端口复用 */
     int on=1;
-    if((setsockopt(usersockfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on)))<0)
+    if((setsockopt(listenfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on)))<0)
     {
         perror("setsockopt failed");
         exit(EXIT_FAILURE);
     }
 
 	/* 套接字绑定端口 */
-	ret = bind(usersockfd, (struct sockaddr*)&user_addr, sizeof(user_addr));
+	ret = bind(listenfd, (struct sockaddr*)&user_addr, sizeof(user_addr));
 	if(ret != 0){
 		perror("bind error");
-		close(usersockfd);
-		close(remtsockfd);
+		close(listenfd);
 		exit(1);
 	}
 	/* 套接字进入被动监听 */
-	ret = listen(usersockfd, SOMAXCONN);//SOMAXCONN由系统决定监听队列长度，一般几百
+	ret = listen(listenfd, SOMAXCONN);//SOMAXCONN由系统决定监听队列长度，一般几百
 
 	if(ret != 0){
 		perror("listen error");
-		close(usersockfd);
-		close(remtsockfd);
+		close(listenfd);
 		exit(1);
 	}
 
@@ -78,10 +73,9 @@ int main(){
 		perror("epoll_create");
 		abort();
 	}
-	ev.data.fd = usersockfd;    //设置与要处理的事件相关的文件描述符
+	ev.data.fd = listenfd;    //设置与要处理的事件相关的文件描述符
 	ev.events = EPOLLIN|EPOLLET;//设置要处理的事件类型
-	/* 注册epoll事件 */
-	ret = epoll_ctl(epfd, EPOLL_CTL_ADD, usersockfd, &ev);
+	ret = epoll_ctl(epfd, EPOLL_CTL_ADD, listenfd, &ev);
 	if(ret == -1){
 		perror("epoll_ctl");
 		abort();
@@ -89,88 +83,126 @@ int main(){
 	/* 添加客户端地址结构 */
 	struct sockaddr_in cli_addr;
     socklen_t cli_len = sizeof(cli_addr);
-    printf("epoll\n");
 
 
+    char strbuf[BIGBUF];
 
 	/* the event loop */
-	int nfds, i, connfd, n,sockfd;
-	char line[1024];
-	for ( ; ; ) {
+	printf("epoll\n");
+	int nfds, i, connfd, n,sockfd,fd,nread;
+	char buf[MAXBUF];
 
-        //printf("outside for\n");
+	for ( ; ; ) {
 		nfds = epoll_wait(epfd, events, 20, 500);
+        if (nfds == -1) {
+            perror("epoll_pwait");
+            exit(EXIT_FAILURE);
+        }
+
 		for(i = 0; i < nfds; ++i) {
             printf("inside for\n");
             /* 建立新的连接 */
-			if(events[i].data.fd == usersockfd){   //有新的连接
-				connfd = accept(usersockfd, (struct sockaddr*)&cli_addr, &cli_len); //accept这个连接
-				//setNonBlocking(connfd);   //设置为非阻塞
-				char *str1 = inet_ntoa(cli_addr.sin_addr);
-				printf("accept a connection from %s\n",str1);
-				/* 设置用于读操作的文件描述符， 设置用于注册read操作事件*/
-				ev.data.fd = connfd;
-				ev.events = EPOLLIN|EPOLLET;
-				epoll_ctl(epfd, EPOLL_CTL_ADD, connfd, &ev);   //将新的fd添加到epoll的监听队列
-            /* 监听到读事件 */
-			} else if (events[i].events & EPOLLIN) {   //已经连接的用户，接收到数据，读socket
-                sockfd = events[i].data.fd;
-                printf("sock=%d\n",sockfd);
-                printf("epoll in\n");
-                while((n=read(sockfd,line,1024)) > 0){
-                    printf("dowhile--n=%d\n",n);
-                    printf("%s\n",line);
-                    bzero(line,1024);
-                    if(n<1024)
-                        break;
+            fd = events[i].data.fd;
+			if(fd == listenfd){   //有新的连接
+                printf("new connect!\n");
+				while ((connfd = accept(listenfd,(struct sockaddr *) &cli_addr, &cli_len)) > 0) {
+                    printf("while circle\n");
+                    setNonBlocking(connfd);
+                    printf("after setnonblocking");
+                    ev.events = EPOLLIN | EPOLLET;
+                    ev.data.fd = connfd;
+                    if (epoll_ctl(epfd, EPOLL_CTL_ADD, connfd,&ev) == -1) {
+                        perror("epoll_ctl: add");
+                        exit(EXIT_FAILURE);
+                    }
                 }
-                printf("out of while");
-                /* 设置用于注册的写操作事件，修改sockfd上要处理的事件为epollout */
-                ev.data.fd=sockfd;
-                ev.events=EPOLLOUT|EPOLLET;
-                epoll_ctl(epfd,EPOLL_CTL_MOD,sockfd,&ev);
-                //mTrans_t *mparam;
-                //mparam = calloc(1, sizeof(mTrans_t));
-                //mparam->mUsocket = sockfd;
-                //mparam->mRsocket = remtsockfd;
-                //tpool_add_work(TransWorker, (void*)mparam);
-                //free(mparam);
+                 if (connfd == -1) {
+                    if (errno != EAGAIN && errno != ECONNABORTED
+                            && errno != EPROTO && errno != EINTR)
+                        perror("accept");
+                }
+                continue;
+                printf("there?\n");
 			}
-			/* 监听到写事件,有事件发送，socket缓冲区有空间 */
-			else if(events[i].events & EPOLLOUT){
-                printf("epoll out\n");
-                sockfd = events[i].data.fd;
-                printf("sock=%d\n",sockfd);
-                //char liner="200 ok";
-                //printf("line is :%s\n",liner);
-                //while(  n=(write(sockfd,liner,1024)) > 0){
-                  //printf("write");
-                  //bzero(liner,1024);
-                  //if(n < 1024)
-                    //break;
-                //}
+			/* 监听到读事件 */
+			if (events[i].events & EPOLLIN) {
+                printf("epollin!\n");
+                //--------------------------------------------------------
+                n = 0;
+                int flag=1,sockgo;
+                struct sockaddr_in servaddr;
+                while ((nread = read(fd, buf + n, MAXBUF-1)) > 0) {
+                    printf("%s--\n",buf);
+                    n += nread;
+                }
+                if (nread == -1 && errno != EAGAIN) {
+                    perror("read error");
+                }
 
-                n = write(sockfd, "HTTP/1.0 400 Bad Request\n\n", 26);
+                 /*
+                     转发转发*/
+                    char ip[32];
+                    if(flag){
+                        DNtoIP(buf,ip);
+                    }
+                    printf("IP is:%s\n",ip);
+                    socklen_t len;
+                    sockgo = socket(AF_INET,SOCK_STREAM,0);
+                    bzero(&servaddr, sizeof(servaddr));
+                    servaddr.sin_family = AF_INET;
+                    servaddr.sin_port = htons(80);
+                    inet_pton(AF_INET,ip,&servaddr.sin_addr);
+                    connect(sockgo,(struct sockaddr *)&servaddr,sizeof(servaddr));
+                    write(sockgo,buf,strlen(buf));
+                    /* 转发转发 */
 
-                ev.data.fd=sockfd;
-                ev.events=EPOLLIN|EPOLLET;
-                epoll_ctl(epfd,EPOLL_CTL_MOD,sockfd,&ev);
-			}
+                printf("read from web\n");
+                read(sockgo,strbuf,4095);
+                //printf("--%s--\n",strbuf);
+                //---------------------------------------------------------
+                ev.data.fd = fd;
+                ev.events = events[i].events | EPOLLOUT;
+                if (epoll_ctl(epfd, EPOLL_CTL_MOD, fd, &ev) == -1) {
+                    perror("epoll_ctl: mod");
+                }
+            }
+            if (events[i].events & EPOLLOUT) {
+                printf("epollout!\n");
+                //-------------------------------------------------------
+                sprintf(buf, "HTTP/1.1 200 OK\r\nContent-Length: %d\r\n\r\nAccess violation!", 17);
+                printf("%s\n",buf);
+                int nwrite, data_size = strlen(buf);
+                n = data_size;
+                while (n > 0) {
+                    printf("send to brower cirlce\n");
+                    nwrite = write(fd, buf + data_size - n, n);
+                    printf("send done\n");
+                    if (nwrite < n) {
+                        if (nwrite == -1 && errno != EAGAIN) {
+                            perror("write error");
+                        }
+                        break;
+                    }
+                    n -= nwrite;
+                }
+                //-------------------------------------------------------
+                close(fd);
+            }
 		}//nfds for
 	}//for
 
 	/* 关闭套接字 */
-	close(usersockfd);
-	close(remtsockfd);
+	close(listenfd);
 	return 0;
 }
 
 /* usersockfd向remtsockfd传送数据，http请求 */
+
 static void* TransWorker(void* arg){
     printf("enter TransWorker \n");
     mTrans_t *pstru;
 	pstru = (mTrans_t *)arg;
-	char buf[BUF_SIZE];
+	char buf[MAXBUF];
 	char ipstr[32];
 	int flag = 1;
 	while (recv(pstru->mUsocket, buf, sizeof(buf), 0) > 0) {
@@ -236,19 +268,14 @@ char *DNtoIP(char *mString, char *ipstr){
 	}
 	char *domainName = (char*)malloc(length);
 	strncpy(domainName, src, length);
+	printf("HOST:%s\n",domainName);
 	if((hptr = gethostbyname(domainName)) == NULL){
 		perror("gethostbyname");
 		return 0;
 	}
-	switch(hptr->h_addrtype){
-		case AF_INET:
-		case AF_INET6:
-				inet_ntop(hptr->h_addrtype, hptr->h_addr, ipstr,sizeof(ipstr));
-				break;
-		default:
-				perror("unknown address type\n");
-				break;
-	}
+	strcpy(ipstr,inet_ntoa(*((struct in_addr *)hptr->h_addr)));
+	//printf("IP :%s\n",inet_ntoa(*((struct in_addr *)hptr->h_addr)));
+	printf("IP :%s\n",ipstr);
 	free(domainName);
 	return ipstr;
 }
