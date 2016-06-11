@@ -1,0 +1,743 @@
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/favicon.ico HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+Accept: */*
+DNT: 1
+Referer: http://my.csdn.net/my/favorite
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+101.201.170.152
+GET http://my.csdn.net/my/favorite HTTP/1.1
+Host: my.csdn.net
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: uuid_tt_dd=7004343368831683899_20160529; lzstat_uv=17348552131193482166|3479011@2819552; _ga=GA1.2.1552265716.1464505130; _gat=1; UserName=u010000297; UserInfo=e%2B1G2oibUrEGGOBsHxQf9yJXGFLdFBvrX3pSqp9beqVEQdtGDCaxbGTMsLLJNHBBe4Ij05CROnJY7GUKrVqu0p8Y6uQPzseYx7tX7FPH9RClF3Gv%2FTwjOQDUsFpGP6On; UserNick=awesomels; AU=6B1; UD=%E8%8F%9C%E9%B8%A1%E6%89%93%E5%AD%97%E5%91%98; UN=u010000297; UE="524878152@qq.com"; BT=1465643125379; access-token=417e0757-1881-459d-9e6c-bbca390112be; dc_tos=o8lthq; dc_session_id=1465643150468
+
+
+119.75.218.70
+GET http://www.baidu.com/ HTTP/1.1
+Host: www.baidu.com
+Proxy-Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: BAIDUID=3889AC4EA512F669527762449412DF31:FG=1; BDUSS=HQwaWxmOHZDcEFHOUpnRU0xNm80cU9Qbjl4bGFvdVNQMn55RWJFU0hvTzVIM0pYQVFBQUFBJCQAAAAAAAAAAAEAAAB-HwguxObB20xTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALmSSle5kkpXM; BIDUPSID=3889AC4EA512F669527762449412DF31; PSTM=1464954129; ispeed_lsm=10; bdpt[2]=1; BDRCVFR[1Sfr_C80Epm]=mk3SLVN4HKm; BDRCVFR[hyLLCYbpewf]=aeXf-1x8UdYcs; BD_HOME=1; H_PS_PSSID=1448_20317_18240_17946_20075_18560_17001_15085_11517_19426; BD_UPN=123353; sug=3; sugstore=0; ORIGIN=0; bdime=0
+
+=1465643150468
+
+
+119.75.218.70
+GET http://www.baidu.com/ HTTP/1.1
+Host: www.baidu.com
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: BAIDUID=3889AC4EA512F669527762449412DF31:FG=1; BDUSS=HQwaWxmOHZDcEFHOUpnRU0xNm80cU9Qbjl4bGFvdVNQMn55RWJFU0hvTzVIM0pYQVFBQUFBJCQAAAAAAAAAAAEAAAB-HwguxObB20xTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALmSSle5kkpXM; BIDUPSID=3889AC4EA512F669527762449412DF31; PSTM=1464954129; ispeed_lsm=10; bdpt[2]=1; BDRCVFR[1Sfr_C80Epm]=mk3SLVN4HKm; BDRCVFR[hyLLCYbpewf]=aeXf-1x8UdYcs; BD_HOME=1; H_PS_PSSID=1448_20317_18240_17946_20075_18560_17001_15085_11517_19426; BD_UPN=123353; sug=3; sugstore=0; ORIGIN=0; bdime=0
+Range: bytes=3-3
+If-Range: "2a3b-51112c17f9240"
+
+
+119.75.217.109
+GET http://www.baidu.com/ HTTP/1.1
+Host: www.baidu.com
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: BAIDUID=3889AC4EA512F669527762449412DF31:FG=1; BDUSS=HQwaWxmOHZDcEFHOUpnRU0xNm80cU9Qbjl4bGFvdVNQMn55RWJFU0hvTzVIM0pYQVFBQUFBJCQAAAAAAAAAAAEAAAB-HwguxObB20xTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALmSSle5kkpXM; BIDUPSID=3889AC4EA512F669527762449412DF31; PSTM=1464954129; ispeed_lsm=10; bdpt[2]=1; BDRCVFR[1Sfr_C80Epm]=mk3SLVN4HKm; BDRCVFR[hyLLCYbpewf]=aeXf-1x8UdYcs; BD_HOME=1; H_PS_PSSID=1448_20317_18240_17946_20075_18560_17001_15085_11517_19426; BD_UPN=123353; sug=3; sugstore=0; ORIGIN=0; bdime=0
+Range: bytes=3-3730
+If-Range: "2a3b-51112c17f9240"
+
+TP/1.1 206 Partial Content
+Date: Sat, 11 Jun 2016 11:06:39 GMT
+Server: Apache
+Last-Modified: Thu, 12 Mar 2015 07:58:57 GMT
+ETag: "2a3b-51112c17f9240"
+Accept-Ranges: bytes
+Cache-Control: max-age=1
+Expires: Sat, 11 Jun 2016 11:06:40 GMT
+Vary: Accept-Encoding,User-Agent
+Content-Range: bytes 3-3/3731
+Connection: Keep-Alive
+Content-Type: text/html
+Transfer-Encoding: chunked
+
+0
+
+!è$À±+±e%ôIßYK 
+119.75.218.70
+GET http://www.baidu.com/ HTTP/1.1
+Host: www.baidu.com
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: BAIDUID=3889AC4EA512F669527762449412DF31:FG=1; BDUSS=HQwaWxmOHZDcEFHOUpnRU0xNm80cU9Qbjl4bGFvdVNQMn55RWJFU0hvTzVIM0pYQVFBQUFBJCQAAAAAAAAAAAEAAAB-HwguxObB20xTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALmSSle5kkpXM; BIDUPSID=3889AC4EA512F669527762449412DF31; PSTM=1464954129; ispeed_lsm=10; bdpt[2]=1; BDRCVFR[1Sfr_C80Epm]=mk3SLVN4HKm; BDRCVFR[hyLLCYbpewf]=aeXf-1x8UdYcs; BD_HOME=1; H_PS_PSSID=1448_20317_18240_17946_20075_18560_17001_15085_11517_19426; BD_UPN=123353; sug=3; sugstore=0; ORIGIN=0; bdime=0
+Range: bytes=8-8
+If-Range: "2a3b-51112c17f9240"
+
+
+HTTP/1.1 206 Partial Content
+Date: Sat, 11 Jun 2016 11:06:39 GMT
+Server: Apache
+Last-Modified: Thu, 12 Mar 2015 07:58:57 GMT
+ETag: "2a3b-51112c17f9240"
+Accept-Ranges: bytes
+Cache-Control: max-age=1
+Expires: Sat, 11 Jun 2016 11:06:40 GMT
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Content-Range: bytes 3-3730/3731
+Content-Length: 3728
+Connection: Keep-Alive
+Content-Type: text/html
+
+K 
+119.75.217.109
+GET http://www.baidu.com/ HTTP/1.1
+Host: www.baidu.com
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: BAIDUID=3889AC4EA512F669527762449412DF31:FG=1; BDUSS=HQwaWxmOHZDcEFHOUpnRU0xNm80cU9Qbjl4bGFvdVNQMn55RWJFU0hvTzVIM0pYQVFBQUFBJCQAAAAAAAAAAAEAAAB-HwguxObB20xTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALmSSle5kkpXM; BIDUPSID=3889AC4EA512F669527762449412DF31; PSTM=1464954129; ispeed_lsm=10; bdpt[2]=1; BDRCVFR[1Sfr_C80Epm]=mk3SLVN4HKm; BDRCVFR[hyLLCYbpewf]=aeXf-1x8UdYcs; BD_HOME=1; H_PS_PSSID=1448_20317_18240_17946_20075_18560_17001_15085_11517_19426; BD_UPN=123353; sug=3; sugstore=0; ORIGIN=0; bdime=0
+Range: bytes=8-3730
+If-Range: "2a3b-51112c17f9240"
+
+TP/1.1 206 Partial Content
+Date: Sat, 11 Jun 2016 11:06:41 GMT
+Server: Apache
+Last-Modified: Thu, 12 Mar 2015 07:58:57 GMT
+ETag: "2a3b-51112c17f9240"
+Accept-Ranges: bytes
+Cache-Control: max-age=1
+Expires: Sat, 11 Jun 2016 11:06:42 GMT
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Content-Range: bytes 8-8/3731
+Content-Length: 1
+Connection: Keep-Alive
+Content-Type: text/html
+
+
+119.75.217.109
+GET http://www.baidu.com/ HTTP/1.1
+Host: www.baidu.com
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: BAIDUID=3889AC4EA512F669527762449412DF31:FG=1; BDUSS=HQwaWxmOHZDcEFHOUpnRU0xNm80cU9Qbjl4bGFvdVNQMn55RWJFU0h

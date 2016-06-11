@@ -11,14 +11,16 @@
 #include <errno.h>
 #include "proxy_main.h"
 #include "filter.h"
-
+#define max(x,y) ((x)>(y)?(x):(y))
 #define Port 8000
 #define MAXBUF 1024
 #define BIGBUF 8000
 
 int main(){
     printf("working\n");
-
+    FILE *getinfo,*getAns;
+	getinfo=fopen("getInfo","w");
+	getAns=fopen("getAns","w");
 	int ret;
 	/* 创建socket */
 	int listenfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -91,14 +93,14 @@ int main(){
 	printf("epoll\n");
 	int nfds, i, connfd, n,sockfd,fd,nread;
 	char buf[MAXBUF];
-
-	for ( ; ; ) {
-		nfds = epoll_wait(epfd, events, 20, 500);
+    int index ;
+	for ( index =0 ; ; ++ index) {
+		nfds = epoll_wait(epfd, events, 20, 2000);
         if (nfds == -1) {
             perror("epoll_pwait");
             exit(EXIT_FAILURE);
         }
-
+        printf("%d\n",nfds);
 		for(i = 0; i < nfds; ++i) {
             printf("inside for\n");
             /* 建立新的连接 */
@@ -129,7 +131,7 @@ int main(){
                 printf("epollin!\n");
                 //--------------------------------------------------------
                 n = 0;
-                int flag=1,sockgo;
+                int   flag =1,sockgo;
                 struct sockaddr_in servaddr;
                 while ((nread = read(fd, buf + n, MAXBUF-1)) > 0) {
                     printf("%s--\n",buf);
@@ -141,25 +143,33 @@ int main(){
 
                  /*
                      转发转发*/
-                    char ip[32];
-                    if(flag){
-                        DNtoIP(buf,ip);
-                    }
-                    printf("IP is:%s\n",ip);
-                    socklen_t len;
-                    sockgo = socket(AF_INET,SOCK_STREAM,0);
-                    bzero(&servaddr, sizeof(servaddr));
-                    servaddr.sin_family = AF_INET;
-                    servaddr.sin_port = htons(80);
-                    inet_pton(AF_INET,ip,&servaddr.sin_addr);
-                    connect(sockgo,(struct sockaddr *)&servaddr,sizeof(servaddr));
-                    write(sockgo,buf,strlen(buf));
-                    /* 转发转发 */
 
+
+                char ip[32];
+                if(flag){
+                    DNtoIP(buf,ip);
+                }
+                printf("IP is:%s\n",ip);
+
+                socklen_t len;
+                sockgo = socket(AF_INET,SOCK_STREAM,0);
+                bzero(&servaddr, sizeof(servaddr));
+                servaddr.sin_family = AF_INET;
+                servaddr.sin_port = htons(80);
+                inet_pton(AF_INET,ip,&servaddr.sin_addr);
+
+                connect(sockgo,(struct sockaddr *)&servaddr,sizeof(servaddr));
                 printf("read from web\n");
+                write(sockgo,buf,strlen(buf));
+                fprintf(getinfo,"%s\n",ip);
+                fprintf(getinfo,"%s\n",buf);
+
+
+
                 read(sockgo,strbuf,4095);
-                //printf("--%s--\n",strbuf);
-                //---------------------------------------------------------
+                fprintf(getAns,"%s\n",ip);
+                fprintf(getAns,"%s\n",strbuf);
+
                 ev.data.fd = fd;
                 ev.events = events[i].events | EPOLLOUT;
                 if (epoll_ctl(epfd, EPOLL_CTL_MOD, fd, &ev) == -1) {
@@ -169,13 +179,12 @@ int main(){
             if (events[i].events & EPOLLOUT) {
                 printf("epollout!\n");
                 //-------------------------------------------------------
-                sprintf(buf, "HTTP/1.1 200 OK\r\nContent-Length: %d\r\n\r\nAccess violation!", 17);
-                printf("%s\n",buf);
-                int nwrite, data_size = strlen(buf);
+                printf("%s\n",strbuf);
+                int nwrite, data_size = strlen(strbuf);
                 n = data_size;
                 while (n > 0) {
                     printf("send to brower cirlce\n");
-                    nwrite = write(fd, buf + data_size - n, n);
+                    nwrite = write(fd, strbuf +max(0, data_size - n), n);
                     printf("send done\n");
                     if (nwrite < n) {
                         if (nwrite == -1 && errno != EAGAIN) {

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "filter.h"
 int main(){
-	printf("dododod\n");
-	char aa="asdfsadfsdf";
+	printf("test mysql......\n");
+	char *aa="你好vatia天气";
 	filter_word(aa);
-	printf("endllll\n");
+	printf("test mysql......\n");
 	return;
 }
