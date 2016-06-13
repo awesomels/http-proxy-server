@@ -11,10 +11,12 @@
 #include <errno.h>
 #include "proxy_main.h"
 #include "filter.h"
-#define max(x,y) ((x)>(y)?(x):(y))
+
 #define Port 8000
 #define MAXBUF 1024
-#define BIGBUF 4096
+#define BIGBUF 409600
+#define N 100
+#define MAXEVENTS 128
 
 int main(){
 
@@ -24,7 +26,7 @@ int main(){
     struct sockaddr_in cli_addr;    //客户端地址结构
     socklen_t cli_len = sizeof(cli_addr);
     int listenfd;
-    char strbuf[MAXBUF];
+    char strbuf[BIGBUF];
 	char buf[MAXBUF];
 	int on=1;
     int index ;
@@ -85,7 +87,7 @@ int main(){
 	printf("epoll loop\n");
 	for ( index =0 ; ; ++ index)
 	{
-        if ( (nfds=epoll_wait(epfd, events, 20, 2000)) == -1)  //epoll_wait
+        if ( (nfds=epoll_wait(epfd, events, MAXEVENTS, -1)) == -1)  //epoll_wait
         {
             perror("epoll_pwait");
             exit(EXIT_FAILURE);
@@ -117,7 +119,7 @@ int main(){
                 }
                 continue;
 			}
-			if (events[i].events & EPOLLIN)  //监听到读事件
+			else if (events[i].events & EPOLLIN)  //监听到读事件
             {
                 printf("-----------------epollin!\n");
                 //--------------------------------------------------------
@@ -131,7 +133,7 @@ int main(){
                 while ((nread = read(fd, buf, MAXBUF-1)) > 0) {
                     printf("HTTP请求打印\n%sHTTP 请求结束\nnread=%d\n",buf,nread);
                     cachein=fopen("cachein","w");
-                    fputs(buf, cachein);
+                    fputs(buf, cachein);  //向cachein写入
                     fclose(cachein);
                 }
                 if (nread == -1 && errno != EAGAIN) {
@@ -149,8 +151,7 @@ int main(){
                 servaddr.sin_family = AF_INET;
                 servaddr.sin_port = htons(80);
                 inet_pton(AF_INET,ip,&servaddr.sin_addr);
-                int ret;
-                if( (ret=connect(sockgo,(struct sockaddr *)&servaddr,sizeof(servaddr))) < 0 )
+                if( (connect(sockgo,(struct sockaddr *)&servaddr,sizeof(servaddr))) < 0 )
                 {
                     printf("connect failed!\n");
                 }
@@ -162,7 +163,8 @@ int main(){
                 while( (nread=read(sockgo, strbuf, BIGBUF-1)) > 0)
                 {
                     printf("HTTP响应打印\n%s\nHTTP响应结束\nnread=%d\n",strbuf,nread);
-                    fputs(strbuf, cachein);
+                    fputs(strbuf, cachein);//向cacheout写入
+                    bzero(strbuf, BIGBUF);
                 }
                 fclose(cachein);
 
@@ -173,20 +175,26 @@ int main(){
                     perror("epoll_ctl: mod");
                 }
             }
-            if (events[i].events & EPOLLOUT)  //监听到写事件
+            else if (events[i].events & EPOLLOUT)  //监听到写事件
             {
                 printf("-----------------epollout!\n");
                 //-------------------------------------------------------
+
+                //char buf2[256];
+                //sprintf(buf2, "HTTP/1.1 200 OK\r\nContent-Length: %d\r\n\r\nHello World", 11);
+                //write(fd, buf2, 255);
+
                 FILE *cacheout;
                 cacheout=fopen("cacheout","r");
-
                 while ( !feof(cacheout) )
                 {
-                    fgets(strbuf, MAXBUF-1, cacheout);
-                    write(fd, strbuf, MAXBUF-1);
+                    fread(strbuf, BIGBUF-1, N, cacheout);//从cacheout读出
+                    //fscanf(cacheout, "%s", strbuf);
+                    write(fd, strbuf, BIGBUF-1);
                     printf("从文件读%s\n",strbuf);
                 }
                 fclose(cacheout);
+
                 //-------------------------------------------------------
                 close(fd);
             }
@@ -202,38 +210,8 @@ int main(){
 
 static void* TransWorker(void* arg){
     printf("enter TransWorker \n");
-    mTrans_t *pstru;
-	pstru = (mTrans_t *)arg;
-	char buf[MAXBUF];
-	char ipstr[32];
-	int flag = 1;
-	while (recv(pstru->mUsocket, buf, sizeof(buf), 0) > 0) {
-		if(flag){
-			DNtoIP(buf, ipstr);            //域名转IP
-			struct sockaddr_in toRemt_addr;//利用remtsockfd发送的地址
-			bzero(&toRemt_addr, sizeof(toRemt_addr));
-			toRemt_addr.sin_family = AF_INET;
-			toRemt_addr.sin_port = htons(80);
-			toRemt_addr.sin_addr.s_addr = htonl(inet_addr(ipstr));
-			flag = 0;
-			/* 连接服务器 connect */
-			if(connect(pstru->mRsocket, (struct sockaddr*)&toRemt_addr, sizeof(toRemt_addr)) < 0){
-                perror("connect error");
-                exit(-1);
-			}
-			/* 发送给远程主机 */
-			write(pstru->mRsocket, buf, sizeof(buf));
-		}
-	}//while(recv)
 
-	/*
-	 *循环接收远程主机返回的http响应
-	 *并返回给usersockfd
-	 */
-    while( read(pstru->mRsocket, buf, sizeof(buf)) > 0 ){
-        /* 响应传会usersockfd */
-        write(pstru->mUsocket, buf,sizeof(buf));
-    }
+
 }
 
 

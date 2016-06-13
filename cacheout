@@ -1,0 +1,501 @@
+HTTP/1.0 200 OK
+Date: Mon, 13 Jun 2016 02:31:09 GMT
+Content-Type: text/html;charset=gb2312
+Set-Cookie: JSESSIONID=XphNTtR5JcqL6d466WCdJGYPzk4fNRHBbC9cnPXLgnZJYL4xqy55!-2084304860; path=/
+X-Cache: MISS from jw
+Via: 1.0 jw:80 (squid/2.6.STABLE16)
+Connection: close
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>哈尔滨工程大学教务处</title>
+<style type="text/css">
+<!-- 
+body {
+	background-color: #F5F3E6;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style> 
+<style type="text/css">
+<!-- 
+.style7 {color: #565804}
+.style8 {color: #990000}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	color: #990000;
+	text-decoration: none;
+}
+a:active {
+	color: #990000;
+}
+
+.style1 {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #5a4311;
+}body {
+	font-size: 9pt;
+	background-image: url(bg.gif);
+}
+.style2 {valign="center" ;  color: #40403e}
+.tab {
+	border: 1px solid #999896;
+	height: 15px;
+}
+.yellow1 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #EFD097;
+	border-right-color: #EFD097;
+	border-bottom-color: #EFD097;
+	border-left-color: #EFD097;
+	font-family: "华文新魏";
+	font-size: 11pt;
+	height: 29px;
+	width: 76px;
+}
+.yellow2 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #EFD097;
+	border-right-color: #EFD097;
+	border-bottom-color: #EFD097;
+	border-left-color: #EFD097;
+	font-size: 9pt;
+	height: 29px;
+	width: 76px;
+	font-family: Arial, Helvetica, sans-serif;
+} 
+.k {
+	background-images: url(images/little.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 20px;
+	padding-left: 20px;
+}
+.k1 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #CFCCC3;
+	border-right-color: #CFCCC3;
+	border-bottom-color: #CFCCC3;
+	border-left-color: #CFCCC3;
+	height: 18px;
+}
+.k2 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #CFCCC3;
+	border-right-color: #CFCCC3;
+	border-bottom-color: #CFCCC3;
+	border-left-color: #CFCCC3;
+	height: 18px;
+}
+.k3 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #CFCCC3;
+	border-right-color: #CFCCC3;
+	border-bottom-color: #CFCCC3;
+	border-left-color: #CFCCC3;
+	height: 18px;
+}
+.div1 {
+	background-image: url(images/button3.gif);
+	background-repeat: no-repeat;
+	height: 21px;
+	width: 92px;
+}
+.div2 {
+	background-image: url(images/button4.gif);
+	background-repeat: no-repeat;
+	height: 21px;
+	width: 92px;
+}
+.style12 {font-size: 10pt}
+.style13 {color: #990000; font-size: 10pt; }
+.style14 {background-image: url(images/button4.gif); valign="center" ; background-repeat: no-repeat; height: 25px; width: 92px; font-size: 10; }
+.style16 {background-image: url(images/button3.gif); background-repeat: no-repeat; height: 25px; width: 92px; font-size: 10; }
+
+-->
+</style>
+</head>
+<SCRIPT language=Javascript>
+   var bannerAD=new Array();
+   var bannerADlink=new Array();
+   var bannerADtarget=new Array();
+   var adNum=0;
+//图片的路径与链接的地址
+
+//格林小镇实景图
+   bannerAD[0]="images/img01.jpg";
+   bannerADtarget[0]="vnet"; 
+   bannerAD[1]="images/img02.jpg";
+   bannerADtarget[1]="vnet";   
+   bannerAD[2]="images/img03.jpg";
+   bannerADtarget[2]="vnet";
+   bannerAD[3]="images/img04.jpg";
+   bannerADtarget[3]="vnet";
+   bannerAD[4]="images/img05.jpg";
+   bannerADtarget[4]="vnet";   
+   bannerAD[5]="images/img06.jpg";
+   bannerADtarget[5]="vnet";
+   bannerAD[6]="images/img07.jpg";
+   bannerADtarget[6]="vnet";
+   bannerAD[7]="images/img08.jpg";
+   bannerADtarget[7]="vnet";   
+     
+   
+      
+   var preloadedimages=new Array();
+   for (i=0;i<bannerAD.length;i++){
+      preloadedimages[i]=new Image();
+      preloadedimages[i].src=bannerAD[i];
+   }
+
+function setTransition(){
+   if (document.all){
+      bannerADrotator.filters.revealTrans.Transition=23;
+      bannerADrotator.filters.revealTrans.apply();
+   }
+}
+
+
+function playTransition(){
+   if (document.all)
+      bannerADrotator.filters.revealTrans.play()
+}
+
+function nextAd(){
+   if(adNum<bannerAD.length-1)adNum++ ;
+      else adNum=0;
+   setTransition();
+   document.images.bannerADrotator.src=bannerAD[adNum];
+   playTransition();
+   theTimer=setTimeout("nextAd()", 6000);
+}
+
+function jump2url(){
+   jumpUrl=bannerADlink[adNum];
+   jumpTarget=bannerADtarget[adNum];
+   
+   if (jumpUrl != ''){
+      if (jumpTarget != '')window.open(jumpUrl,jumpTarget);
+      else window.open(jumpUrl,"","width=100,height=100,toolbar=no,location=no,directories=no,status=no,scrollbars=no,resizable=no");
+   }
+}
+function displayStatusMsg() { 
+   status=bannerADlink[adNum];
+   document.returnValue = true;
+}
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</SCRIPT>
+<body>
+<table width="900"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#F5F3E6">　</td>
+  </tr>
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="280" height="50" align="center" valign="top" bgcolor="#F5F3E6"><img src="test4.jpg" width="171" height="100"></td>
+        <td width="713" bgcolor="#F5F3E6"><table width="97%"  border="0" cellspacing="0" cellpadding="0">
+          <tr bgcolor="93621F">
+            <td height="1" colspan="8"></td>
+            </tr>
+          <tr align="center">
+            <td height="32"><a href="ACTIONSHOWINFO.APPPROCESS?mode=1&catalogParent=1" class="style1">机构设置</a></td>
+            <td><a href="ACTIONSHOWINFO.APPPROCESS?mode=1&catalogParent=2" class="style1">管理文件</a></td>
+            <td><a href="ACTIONSHOWINFO.APPPROCESS?mode=1&catalogParent=3" class="style1">教学动态</a></td>
+            <td><a href="ACTIONSHOWINFO.APPPROCESS?mode=1&catalogParent=4" class="style1">本科教学</a></td>
+            <td><a href="Main.jsp" class="style1">查询中心</a></td>
+            <td><a href="ACTIONSHOWFILES.APPPROCESS?mode=1" class="style1">下载中心</a></td>
+            <td><a href="http://hrbeu.fanya.chaoxing.com" class="style1">网络通识课</a></td>
+            <td><a href="http://cgb.hrbeu.edu.cn/" class="style1">陈赓班</a></td>
+          </tr>
+          <tr bgcolor="93621F">
+            <td height="1" colspan="8"></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="477" bgcolor="#F5F3E6"><table width="450" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="450"><img style="FILTER:revealTrans(duration=1,transition=12)" src="images/img01.jpg" width="440" height="386" border="0" align="center" name="bannerADrotator">
+    <script language=JavaScript>nextAd()</script></td>
+          </tr>
+        </table></td>
+        <td width="423" valign="top" bgcolor="#F5F3E6">
+          <table width="94%"  border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+           <td height="290" valign="top" bgcolor="#F5F3E6">
+             <iframe name="_Board" width="100%" height="100%" src="ACTIONSHOWINFO.APPPROCESS?mode=5&size=12&sizeCatalog=4" frameborder="0" scrolling="no"></iframe></td>
+          </tr>
+          <tr>
+            <td>
+
+              <table width="98%"  border="0" align="right" cellpadding="0" cellspacing="0">
+			    <tr><td width="92">
+<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="92" class="k1">　</td>
+                  </tr>
+                <tr>
+                  <td height="25" valign="middle"><div  class="style12" id="divstudent" ><span class="style8">　<img src="images/star1.gif" width="3" height="3"> </span><a href="#"  onclick="chn('student')" class="style2">学生服务</a></div>
+                  <div class="style14" id="studentdiv" style="display:none "><span class="style8">　<img src="images/star2.gif" width="3" height="3"> </span><a href="#"  onclick="chn('student')" class="style2">学生服务</a></div></td>
+                  </tr>
+                <tr>
+                  <td height="25" valign="middle" ><div  class="style16" id="divteacher">
+                    <div align="left" class="style14"><span class="style8">　<img src="images/star2.gif" width="3" height="3"> </span><a href="#" onclick="chn('teacher')" class="style2">教师服务</a></div>
+                  </div>
+                  <div id="teacherdiv" style="display:none" class=""><span class="style8">　<img src="images/star1.gif" width="3" height="3"> </span><a href="#" onclick="chn('teacher')" class="style2">教师服务</a></div></td>
+                  </tr>
+              </table>
+				</td> 
+				<td>
+				<div id="student" style="display:">
+				
+				      <div align="left">
+				        <table width="100%"  border="0" align="right" cellpadding="0" cellspacing="0">
+				          <!--DWLayoutTable-->
+				          <tr>
+				            <td width="32%" height="20" align="center"><div align="left"><span class="style13">· </span><span class="style12"><a href="#" onClick="window.open('http://jwxk.hrbeu.edu.cn','','toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=0,top=0,left=0')">网络选课</a></span></div></td>
+                              <td width="48%" height="20"><span class="style13">· </span><span class="style12"><a href="ACTIONBMGRADETEST.APPPROCESS" class="style2">四、六级报名</a></span></td>
+                            </tr>
+				          <tr>
+				            <td height="20" align="center"><div align="left"><span class="style13">· </span><span class="style12"><a href="ACTIONQUERYELECTIVERESULTBYSTUDENT.APPPROCESS" class="style2">学生课表查询</a></span></div></td>
+                              <td><span class="style12"><a href="http://202.118.176.20/ACTIONBMSIGNUP.APPPROCESS" class="style2"><span class="style13">· </span>考试报名</a></span></td>
+                            </tr>
+				          <tr>
+				            <td height="18" align="center"><div align="left"><span class="style13">· </span><span class="style12"><a href="ACTIONQUERYSTUDENTSCORE.APPPROCESS" class="style2">成绩查询</a></span></div></td>
+                              <td><span class="style13">· </span><span class="style12"><a href="ACTIONQUERYSUBMITBYSTUDENT.APPPROCESS" class="style2"> 学生报名查询</a></span></td>
+                            </tr>
+				          <tr>
+				            <td ><span class="style8">·</span><a href="ACTIONQUERYSTUDENTINFO.APPPROCESS" class="style2"> 学生信息核对</a></span></td>
+                              <td><span class="style8">·</span><span class="style12"><a href="http://pjweb.hrbeu.edu.cn" class="style2"> 教师考评</a></span></td>
+                            </tr>
+				          <tr>
+				            <td height="20" align="center"><div align="left">
+				              <div align="left"><span class="style13">· </span><span class="style12"></span><a href="StuQuery.htm" class="style2">  学籍信息查询</a></span></div></td>
+                            </tr>
+				              </table>
+				        </div>
+				</div>
+			  <div id="teacher" style="display:none">
+                
+                    <div align="left">
+                      <table width="100%"  border="0" align="right" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="32%" height="20" align="center"><div align="left"><span class="style8">· </span><a href="ACTIONQUERYTEACHERSCHEDULEBYSELF.APPPROCESS" class="style2">教师课表查询</a></div></td>
+                              <td width="48%"><span class="style8">· <a href="ACTIONPKADJUSTCOURSEPACKET.APPPROCESS" class="style2">调课申请</a></span></td>
+                            </tr>
+                        <tr>
+                          <td height="20" align="center"><div align="left"><span class="style8">· </span><a href="ACTIONQUERYELECTIVERESULTBYTEACHER.APPPROCESS" class="style2">学生名单查询</a></div></td>
+                              <td><span class="style8">·  <a href="ACTIONPKGETROOMPACKET.APPPROCESS" class="style2">公用教室申请</a></span></td>
+                            </tr>
+                        <tr>
+                          <td height="20" align="center"><div align="left"><span class="style8">· <a href="ACTIONEDITSCOREBYTEACHER.APPPROCESS" class="style2">成绩录入</a></span></div></td>
+                              <td><span class="style8">·<a href="ACTIONQUERYAPPRAISERESULT.APPPROCESS" class="style2">      评价信息反馈</a></span></td>
+                            </tr>
+                        <tr>
+                             <td height="20" align="center"><div align="left"><span class="style8">· <a href="erya.html" class="style2">网络通识课</a></span></div></td>
+                          </tr>
+
+                      </table>
+                    </div>
+			  </div>				</td></tr>
+              </table>			  </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#F5F3E6"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="23%"><table width="180" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+              <iframe name="_Logon" width="100%" height="100" src="ACTIONLOGON.APPPROCESS?mode=3" frameborder="0" scrolling="no"></iframe></td>
+          </tr>
+        </table></td>
+        <td width="77%" height="119" bgcolor="#FFFFFF"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr align="center">
+            <td width="52" height="54"><img src="images/01.gif" width="43" height="40" border="0"></td>
+            <td width="118" align="left"><a href="http://jwbklw.hrbeu.edu.cn/bylw1/" class="style2">毕业论文系统<br>
+      Thesis System </a></td>
+            <td width="1" rowspan="3" bgcolor="#E4E4E1"></td>
+            <td width="52"><img src="images/02.gif" width="43" height="40"></td>
+            <td width="118" align="left"><a href="http://kyxljh.hrbeu.edu.cn/ResearchPlanWeb/" class="style2">科研训练计划<br>
+      Research Training </a></td>
+            <td width="1" rowspan="3" bgcolor="#E4E4E1"></td>
+            <td width="50"><img src="images/03.gif" width="43" height="40"></td>
+            <td width="118" align="left"><a href="http://cern.hrbeu.edu.cn/" class="style2">素材资源平台<br>
+      Curriculum</a></td>
+            <td width="1" rowspan="3" bgcolor="#E4E4E1"></td>
+            <td width="52"><img src="images/04.gif" width="43" height="40"></td>
+            <td width="119" align="left"><a href="http://lab805.hrbeu.edu.cn/" class="style2">电工电子实习基地<br>
+      Open lab </a></td>
+          </tr>
+          <tr align="center">
+            <td height="1" colspan="2" bgcolor="#E4E4E1"></td>
+            <td height="1" colspan="2" bgcolor="#E4E4E1"></td>
+            <td height="1" colspan="2" bgcolor="#E4E4E1"></td>
+            <td height="1" colspan="2" bgcolor="#E4E4E1"></td>
+          </tr>
+          <tr align="center">
+            <td height="51"><img src="images/08.gif" width="43" height="40"></td>
+            <td align="left"><a href="http://gongxue.cn/suzhijiaoyu/ShowArticle.asp?ArticleID=100055" class="style2">通识教育选修课课程简介<br>
+      </a></td>
+            <td><img src="images/07.gif" width="43" height="40"></td>
+            <td align="left"><a href="http://www1.hrbeu.edu.cn/xdjy/xnzy.html" class="style2">教学资源网<br>
+      Education Resource</a></td>
+            <td><img src="images/06.gif" width="43" height="40"></td>
+            <td align="left"><a href="http://pe.hrbeu.edu.cn/student" class="style2">体育选课系统<br>
+      Physical Education </a></td>
+            <td><img src="images/05.gif" width="43" height="40"></td>
+            <td align="left"><a href="http://202.118.177.49:8088/gx/login.do" class="style2">工程训练中心<br>
+      EngineeringTraining</a></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="3" bgcolor="#F5F3E6"></td>
+  </tr>
+  <tr>
+    <td height="2" bgcolor="E4E1CE"></td>
+  </tr>
+  <tr>
+    <td height="7" bgcolor="#F5F3E6"></td>
+  </tr>
+  <tr>
+    <td height="66" bgcolor="E3E1CC"><table width="90%"  border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="76%" height="22" class="style2">中国·黑龙江省·哈尔滨市·南岗区南通大街145号　邮编：150001</td>
+        <td width="24%" rowspan="2" class="style2">·院系导航
+          <select name="select" class="tab" onChange="MM_jumpMenu('parent',this,1)">
+              <option selected>--哈工程校内站点--</option>
+              <option value="http://202.118.176.116/default.htm">行政办公网</option>
+              <option value="http://www.hrbeu.edu.cn/">WWW主页</option>
+              <option value="http://202.118.176.11/new2004/in.asp">图书馆</option>
+              <option value="http://yjsy.hrbeu.edu.cn/">研究生院</option>
+              <option value="http://panda.hrbeu.edu.cn/">招生就业信息网</option>
+              <option value="http://222.27.159.44/">感知世界体验区</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td height="22"><span class="style2">哈尔滨工程大学教务处</span>　　　　<span class="style7">TEL：(86)0451-82519243</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="13" bgcolor="A4A178"></td>
+  </tr>
+</table>
+</body>
+</html>
+<SCRIPT language=JavaScript>
+<!--
+function chn(obj1){
+if(obj1=="student"){
+   document.all['div'+obj1].style.display='';
+   document.all[obj1+'div'].style.display='none';
+   document.all['divteacher'].style.display='';
+   document.all['teacherdiv'].style.display='none';   
+   document.all[obj1].style.display='';
+   document.all['teacher'].style.display='none';
+
+}else if(obj1=="teacher"){
+   document.all[obj1+'div'].style.display='';
+   document.all['div'+obj1].style.display='none';
+   document.all['studentdiv'].style.display='';
+   document.all['divstudent'].style.display='none';   
+   document.all[obj1].style.display='';
+   document.all['student'].style.display='none';
+}}
+  function btXKClicked(){
+
+ var ReturnValue = window.showModalDialog("/Appraise_JSP/confirm.jsp?type=XK", "", "dialogWidth:300px; dialogHeight:150px; dialogLeft:300px; dialogTop:300px;status:no; Resizable=yes;");
+if( ReturnValue != null&&ReturnValue==1 ){
+    window.location.href='http://202.118.191.215:8080?temp='+Math.random();
+}else if( ReturnValue != null&&ReturnValue==0 ){
+  window.location.href='ACTIONJSATTENDAPPRAISE_001.APPPROCESS?temp='+Math.random();
+}  
+}
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+if (restore) selObj.selectedIndex=0;
+}
+//-->
+</SCRIPT>
+Date: Mon, 13 Jun 2016 02:31:09 GMT
+Pragma: no-cache
+Content-Length: 2046
+Content-Type: text/html;charset=GBK
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-Cache: MISS from jw
+Via: 1.0 jw:80 (squid/2.6.STABLE16)
+Connection: keep-alive
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+
+<html>
+<head>
+<title>Untitled Document</title>
+
+<link href="css/css.css" rel=stylesheet>
+<meta http-equiv="Content-Type" content="text/html; c
